@@ -38,7 +38,9 @@ class Main(Base):
         self.find_element_and_click(DiskPageLocators.create_button)
         self.find_element_and_click(DiskPageLocators.create_folder)
         self.clear_input(DiskPageLocators.folder_name_input)
-        self.find_element_and_send(DiskPageLocators.folder_name_input, f"test{random.randint(1, 999)}")
+        self.find_element_and_send(
+            DiskPageLocators.folder_name_input, f"test{random.randint(1, 999)}"
+        )
         self.find_element_and_click(DiskPageLocators.save_folder)
         self.wait_for_element(5, DiskPageLocators.open_saved_folder)
         self.double_click(DiskPageLocators.open_saved_folder)
@@ -57,8 +59,11 @@ class Main(Base):
 
     @allure.step("Загружаем файл")
     def upload_file_in_folder_ya_disk(self):
-        self.find_element_and_send(DiskPageLocators.upload_file, "C:/Users/sviri/PycharmProjects/tests_yandex"
-                                                                 "/ui_yandex/file_for_upload.txt")
+        self.find_element_and_send(
+            DiskPageLocators.upload_file,
+            "C:/Users/sviri/PycharmProjects/tests_yandex"
+            "/ui_yandex/file_for_upload.txt",
+        )
         self.wait_for_element(5, DiskPageLocators.close_ad_uploaded_file)
         self.find_element_and_click(DiskPageLocators.close_ad_uploaded_file)
         self.double_click(DiskPageLocators.file_name)

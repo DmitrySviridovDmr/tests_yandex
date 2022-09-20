@@ -4,8 +4,10 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLocators:
-    login_button = (By.XPATH, "//a[@class='home-link2 headline__personal-enter home-link2_color_black']")
-    enter_by_email = (By.XPATH, "//button[@class='Button2 Button2_size_l Button2_view_clear']")
+    login_button = (
+        By.XPATH,
+        "//a[@class='home-link2 headline__personal-enter home-link2_color_black']",
+    )
     email_field = (By.ID, "passp-field-login")
     enter_button = (By.ID, "passp:sign-in")
     password_field = (By.ID, "passp-field-passwd")
@@ -19,22 +21,37 @@ class MainPageLocators:
 
 class DiskPageLocators:
     create_button = (By.XPATH, "//button[@type='button']")
-    upload_button = (By.XPATH, "//div[@class='upload-button__attach-wrapper']")
     upload_file = (By.XPATH, "//input[@type='file']")
-    close_ad_uploaded_file = (By.XPATH, "//button[@class='Button2 Button2_view_clear-inverse Button2_size_m "
-                                        "uploader-progress__close-button']")
+    close_ad_uploaded_file = (
+        By.XPATH,
+        "//button[@class='Button2 Button2_view_clear-inverse Button2_size_m "
+        "uploader-progress__close-button']",
+    )
     text_in_uploaded_file = (By.XPATH, "//p[@class='mg1']")
-    create_folder = (By.XPATH, "//span[@class='file-icon file-icon_size_m file-icon_dir_plus "
-                               "create-resource-button__icon']")
+    create_folder = (
+        By.XPATH,
+        "//span[@class='file-icon file-icon_size_m file-icon_dir_plus "
+        "create-resource-button__icon']",
+    )
     folder_name_input = (By.XPATH, "//input[@text='Новая папка']")
-    save_folder = (By.XPATH, "//button[@class='Button2 Button2_view_action Button2_size_m confirmation-dialog__button "
-                             "confirmation-dialog__button_submit ']")
-    create_file = (By.XPATH, "//span[@class='file-icon file-icon_size_m file-icon_doc create-resource-button__icon']")
+    save_folder = (
+        By.XPATH,
+        "//button[@class='Button2 Button2_view_action Button2_size_m confirmation-dialog__button "
+        "confirmation-dialog__button_submit ']",
+    )
+    create_file = (
+        By.XPATH,
+        "//span[@class='file-icon file-icon_size_m file-icon_doc create-resource-button__icon']",
+    )
     file_name_input = (By.XPATH, "//input[@text='Новый документ']")
-    save_file = (By.XPATH, "//button[@class='Button2 Button2_view_action Button2_size_m confirmation-dialog__button "
-                           "confirmation-dialog__button_submit ']")
-    open_saved_folder = (By.XPATH, "//div[@class='listing-item listing-item_theme_tile listing-item_size_m "
-                                   "listing-item_type_dir listing-item_selected js-prevent-deselect']")
+    save_file = (
+        By.XPATH,
+        "//button[@class='Button2 Button2_view_action Button2_size_m confirmation-dialog__button "
+        "confirmation-dialog__button_submit ']",
+    )
+    open_saved_folder = (
+        By.XPATH,
+        "//div[@class='listing-item listing-item_theme_tile listing-item_size_m "
+        "listing-item_type_dir listing-item_selected js-prevent-deselect']",
+    )
     file_name = (By.XPATH, "//span[@class='clamped-text']")
-    user_menu = (By.XPATH, "//div[@class='user-pic user-pic_has-plus_ user-account__pic']")
-    exit_button = (By.XPATH, "//span[text()='Выйти']")

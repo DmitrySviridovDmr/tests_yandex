@@ -1,6 +1,6 @@
 from api_yandex.pages.http_method import HttpMethod
 
-base_url = 'https://cloud-api.yandex.net/v1/disk'
+base_url = "https://cloud-api.yandex.net/v1/disk"
 
 
 class YandexDisk:

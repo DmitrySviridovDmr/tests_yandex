@@ -4,7 +4,11 @@ import requests
 
 class HttpMethod:
     token = "y0_AgAAAABksblRAADLWwAAAADPSP_CxkDD6a4sTceWbcoxZwRxgfXdmn4"
-    headers = {'Content-Type': 'application/json', 'Accept': 'application/json', 'Authorization': f'OAuth {token}'}
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": f"OAuth {token}",
+    }
 
     @staticmethod
     def get(url):

@@ -33,7 +33,9 @@ class Base:
     """Ждем элемент"""
 
     def wait_for_element(self, sec, element):
-        WebDriverWait(self.browser, sec).until(ec.visibility_of_element_located(element))
+        WebDriverWait(self.browser, sec).until(
+            ec.visibility_of_element_located(element)
+        )
 
     """Переключаемся на вкладку"""
 
@@ -43,4 +45,6 @@ class Base:
     """Двойной клик по элементу"""
 
     def double_click(self, element):
-        ActionChains(self.browser).double_click(self.browser.find_element(*element)).perform()
+        ActionChains(self.browser).double_click(
+            self.browser.find_element(*element)
+        ).perform()

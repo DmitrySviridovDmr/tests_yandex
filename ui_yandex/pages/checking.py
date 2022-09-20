@@ -14,5 +14,6 @@ class Checking(Base):
                 allure.attach(
                     self.browser.get_screenshot_as_png(),
                     name="Ожидаемый текст не найден",
-                    attachment_type=AttachmentType.PNG)
+                    attachment_type=AttachmentType.PNG,
+                )
                 assert False
